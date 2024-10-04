@@ -4,13 +4,13 @@ This project implements a FastAPI-based for managing recipes in a restaurant, ut
 
 ## How to Set Up and Run the Application ##
 
-    ## Prerequisites ##
+    Prerequisites 
 
         [-Python 3.8+ installed on your system
          -PostgreSQL installed and a database named restaurant created
          -FastAPI, SQLAlchemy, and other necessary dependencies installed ]
 
-    ## Setup Instructions and run the application ##
+    Setup Instructions and run the application 
       1.Create a virtual environment: 
 
           python -m venv venv
@@ -80,4 +80,24 @@ This project implements a FastAPI-based for managing recipes in a restaurant, ut
     Validation: Pydantic models are used for validating request bodies and ensuring the data structure is correct before any database interaction occurs. 
 
 
+## Authentication ##
+Once the project is up and running, you can continue by managing recipes, users, and authentication through the provided API endpoints and using the CLI for additional operations like database initialization and task automation.
 
+## Routers: ##
+We use router object to be able to split up all of our routers or path operations into different files and then we import them just by calling , FastAPI routers also Router prefix then add a specific group name tag
+
+    recipe.py: Handles all the operations related to managing recipes.
+    user.py: Manages user registration, login
+    auth.py: Manages user authentication logic.
+    oauth.py: Implements OAuth2 authorization mechanisms.
+
+## CLI:##
+In app open folder called CLI inside that folder open file called CLI.py 
+    cli.py: Command Line Interface for managing tasks like initializing the database, CRUD, registration, login and other tasks users want to perform.
+
+ ## General adds ##
+
+    User Authentication: Registration and login functionality.
+    Authorization: OAuth2 implemented for secure access to the API.
+    Recipe Management: Endpoints for CRUD recipes.
+    CLI Tools: Custom command-line tools for managing app functionality. 
